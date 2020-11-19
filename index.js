@@ -6,9 +6,13 @@ function toggleTheme() {
     if (isDarkTheme){
         var element = document.getElementById("layout-container");
         element.classList.remove("dark");
+        // document.body.classList.remove("dark");
     }else{
         var element = document.getElementById("layout-container");
         element.classList.add("dark");
+        // document.body.classList.add("dark");
+
+
     }
     isDarkTheme = !isDarkTheme;
 }
