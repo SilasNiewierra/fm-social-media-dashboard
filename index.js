@@ -3,16 +3,13 @@ isDarkTheme = false;
 
 function toggleTheme() {
     console.log(isDarkTheme);
-    if (isDarkTheme){
+    if (isDarkTheme) {
         var element = document.getElementById("layout-container");
         element.classList.remove("dark");
-        // document.body.classList.remove("dark");
-    }else{
+    } else {
         var element = document.getElementById("layout-container");
         element.classList.add("dark");
-        // document.body.classList.add("dark");
-
-
+        console.log(window.screen.width);
     }
     isDarkTheme = !isDarkTheme;
 }
