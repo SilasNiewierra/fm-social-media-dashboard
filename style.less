@@ -13,6 +13,7 @@ body {
 
 // grid settings
 .layout-container {
+    .transition();
     background-color: @color-bg;
     height: 100%;
     max-height: 100%;
@@ -52,32 +53,16 @@ body {
     border-top: 5px solid @color-youtube;
 }
 
-.instagram-border{
+// instagram
+.instagram-border {
     background-image: @color-instagram;
     padding-top: 5px;
-    border-radius: 5px;
-}
-
-.instagram{
-    background: @color-card;
-}
-
-// card
-.card {
-    background-color: @color-card;
-    border-radius: 5px;
-    width: 300px;
-    min-width: 300px;
-    max-width: 300px;
-    padding: 10px 30px 10px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    border-radius: 5px 5px 10px 10px;
 }
 
 // seperate card to get linear gradient
 .instagram-card {
+    .transition();
     background-color: @color-card;
     border-radius: 0px 0px 5px 5px;
     width: 300px;
@@ -89,6 +74,23 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+
+// card
+.card {
+    .transition();
+    background-color: @color-card;
+    border-radius: 5px;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 
 // header
 .header {
@@ -145,7 +147,7 @@ body {
     /* 1 */
     height: 1em;
     width: 2em;
-    background:@color-toggle;
+    background: @color-toggle;
     border-radius: 1em;
     align-items: center;
 }
@@ -189,12 +191,13 @@ body {
     max-height: 300px;
 }
 
-.platform-logo-name-container{
+.platform-logo-name-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .platform-user-name {
     margin-left: 10px;
 }
@@ -244,6 +247,7 @@ body {
 .overview-title-container {
     margin-top: 30px;
 }
+
 .overview-title {
     font-weight: @font-weight-bold;
     font-size: @font-size-l;
@@ -258,7 +262,7 @@ body {
     gap: 12px;
 }
 
-.stats{
+.stats {
     height: 150px;
     max-height: 150px;
 }
@@ -285,5 +289,62 @@ body {
 
 // dark theme
 .dark {
+    .transition();
     background-color: @color-dark-bg;
+ 
+
+    .header-toggle-text {
+        color: @color-dark-text-easy;
+    }
+
+    .switch {
+        background: @color-dark-toggle;
+    }
+
+    .switch div {
+        background-color: @color-dark-top;
+    }
+    .header-title {
+        color: @color-dark-text-hard;
+    }
+
+    .header-followers {
+        color: @color-dark-text-easy;
+    }
+
+    .card {
+        .transition();
+        background-color: @color-dark-card;
+    }
+
+    .instagram-card {
+        .transition();
+        background-color: @color-dark-card;
+    }
+
+    .platform-user-name {
+        color: @color-dark-text-easy;
+    }
+
+    .platform-follower-count {
+        color: @color-dark-text-hard;
+    }
+
+    .overview-title{
+        color: @color-dark-text-hard;
+    }
+
+    .overview-stats-title{
+        color: @color-dark-text-easy;
+    }
+
+    .overview-stats-count {
+        color: @color-dark-text-hard;
+    }
+}
+
+.transition {
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
 }
