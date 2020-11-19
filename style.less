@@ -15,13 +15,33 @@ body {
 // grid settings
 .layout-container {
     .transition();
-    background: linear-gradient(180deg, @color-top 30%, @color-bg 0, @color-bg 100%);
+    // background: linear-gradient(180deg, @color-top 30%, @color-bg 0, @color-bg 100%);
+    background-color: @color-bg;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.background-top {
+    content: "";
+    height: 250px;
+    display: block;
+    width: 100%;
+    background-color: @color-top;
+    top: 0;
+}
+
+.content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
 }
 
 .container {
@@ -298,7 +318,13 @@ body {
 .dark {
 
     .transition();
-    background: linear-gradient(180deg, @color-dark-top 30%, @color-dark-bg 0, @color-dark-bg 100%);
+    // background: linear-gradient(180deg, @color-dark-top 30%, @color-dark-bg 0, @color-dark-bg 100%);
+    background-color: @color-dark-bg;
+
+    .background-top {
+        .transition();
+        background-color: @color-dark-top;
+    }
 
     .header-mobile-divider {
         background-color: @color-dark-text-easy;
@@ -363,7 +389,7 @@ body {
 
 
 // mobile layout
-@media only screen and (max-width: 940px) {
+@media (max-width: 940px) {
 
     .header {
         flex-direction: column;
@@ -409,7 +435,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
 
     .header-mobile-divider {
         display: block;
