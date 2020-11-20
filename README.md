@@ -1,4 +1,6 @@
-## Social Media Dashboard
+# Social Media Dashboard
+
+![Image of Yaktocat](/assets/desktop-preview.jpg)
 
 A simple UI concept with vanilla JS, HTML and LESS.
 
