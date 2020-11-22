@@ -1,6 +1,6 @@
 # Social Media Dashboard
 
-![Image of Yaktocat](/assets/desktop-preview.jpg)
+![Image of Preview](/assets/desktop-preview.jpg)
 
 Check it out [here](https://fm-social-media-dashboard-one.vercel.app/)
 
